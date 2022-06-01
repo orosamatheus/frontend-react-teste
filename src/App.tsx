@@ -1,27 +1,28 @@
-import Layout from "./components/Layout/Layout";
+import Layout from "./components/Layout";
 import {
   Tabs,
   Tab,
   TabPanels,
   TabPanel,
   TabList,
-  Text,
 } from "@chakra-ui/react";
+
+import Form from "./components/Form";
 
 function App() {
   return (
     <Layout>
-      <Tabs isFitted variant="enclosed" w="100vw">
-        <TabList mb="1em" bgColor="blue.50">
+      <Tabs isFitted variant="enclosed" w="100vw" colorScheme="twitter">
+        <TabList mb="1em" >
           <Tab>Random CatFact</Tab>
           <Tab>List of CatFacts</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
-            <Text>one!</Text>
+            <Form />
           </TabPanel>
           <TabPanel>
-            <Text>two!</Text>
+            <Form isListOfFacts />
           </TabPanel>
         </TabPanels>
       </Tabs>
