@@ -1,6 +1,6 @@
 ## 💻 Sobre o projeto
 
-Este projeto foi feito para teste, tem como objetivo implementar um WebApp que consiste em buscar e listar fatos da api ([CatNinja]()https://catfact.ninja/).
+Este projeto foi feito para teste, tem como objetivo implementar um WebApp que consiste em buscar e listar fatos da api [CatNinja](https://catfact.ninja/).
 
 ---
 
