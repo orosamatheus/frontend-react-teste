@@ -35,7 +35,7 @@ export default function Form({ isListOfFacts }: FormProps) {
           <FormLabel htmlFor="maxLength">Tamanho do fato: </FormLabel>
           <NumberInput>
             <NumberInputField
-              min={0}
+              min={20}
               name="maxLength"
               id="maxLength"
               {...register("maxLength")}
