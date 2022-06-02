@@ -1,6 +1,7 @@
 import { extendTheme } from "@chakra-ui/react";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 import {
+    BREAKPOINT_XS,
     BREAKPOINT_LG,
     BREAKPOINT_SM,
     BREAKPOINT_MD,
@@ -9,6 +10,7 @@ import {
 
 export default extendTheme({
     breakpoints: createBreakpoints({
+        xs: BREAKPOINT_XS,
         sm: BREAKPOINT_SM,
         md: BREAKPOINT_MD,
         lg: BREAKPOINT_LG,
@@ -18,7 +20,7 @@ export default extendTheme({
         global: (props: any) => ({
             body: {
                 fontFamily: `'Poppins', sans-serif`,
-                fontSize: "1.6rem",
+                fontSize: "1.2rem",
                 lineHeight: "tall",
                 backgroundColor: props.theme.colors.white[50],
                 overflowX: "hidden",
@@ -29,4 +31,11 @@ export default extendTheme({
             },
         }),
     },
+    components: {
+        Container: {
+            colorScheme: {
+
+            }
+        }
+    }
 });
