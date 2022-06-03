@@ -22,20 +22,19 @@ export default function Form({ isListOfFacts }: FormProps) {
     isSubmitting,
   } = useContext(Context);
 
-
-  const submitFunction = 
-    isListOfFacts
-      ? handleSubmit(onSubmitListOfFacts)
-      : handleSubmit(onSubmitFact);
+  const submitFunction = isListOfFacts
+    ? handleSubmit(onSubmitListOfFacts)
+    : handleSubmit(onSubmitFact);
 
   return (
-    <form onSubmit={submitFunction}>
-      <Flex gap="5" justify="center" align="center">
+    <form className="form" data-testid="submitForm" onSubmit={submitFunction}>
+      <Flex className="box" gap="5" justify="center" align="center">
         <FormControl>
           <FormLabel htmlFor="maxLength">Tamanho do fato: </FormLabel>
-          <NumberInput>
+          <NumberInput className="numberInput">
             <NumberInputField
-              min={20}
+              min={0}
+              data-testid="factField"
               name="maxLength"
               id="maxLength"
               {...register("maxLength")}
@@ -49,8 +48,9 @@ export default function Form({ isListOfFacts }: FormProps) {
         {isListOfFacts ? (
           <FormControl>
             <FormLabel htmlFor="numberOfFacts">Quantidade de fatos: </FormLabel>
-            <NumberInput>
+            <NumberInput className="numberInput">
               <NumberInputField
+                data-testid="factsField"
                 min={0}
                 id="numberOfFacts"
                 name="numberOfFacts"
@@ -64,8 +64,9 @@ export default function Form({ isListOfFacts }: FormProps) {
           </FormControl>
         ) : null}
       </Flex>
-      <Flex justify="center">
+      <Flex justify="center" className="box">
         <Button
+          className="button"
           colorScheme="twitter"
           variant="solid"
           type="submit"

@@ -7,8 +7,8 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <Flex h="100vh" w="100vw" direction="column" alignItems="center">
-      <Box>{children}</Box>
+    <Flex className="layoutContainer" h="100vh" w="100vw" direction="column" alignItems="center">
+      <Box className="layoutBox">{children}</Box>
     </Flex>
   );
 }

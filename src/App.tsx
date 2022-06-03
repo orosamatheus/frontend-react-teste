@@ -31,13 +31,19 @@ function App() {
 
   return (
     <Layout>
-      <Tabs isFitted variant="enclosed" w="100vw" colorScheme="twitter">
-        <TabList mb="1em">
-          <Tab>Random CatFact</Tab>
-          <Tab>List of CatFacts</Tab>
+      <Tabs
+        className="tabs"
+        isFitted
+        variant="enclosed"
+        w="100vw"
+        colorScheme="twitter"
+      >
+        <TabList className="tabList" mb="1em">
+          <Tab className="tab">Random CatFact</Tab>
+          <Tab className="tab">List of CatFacts</Tab>
         </TabList>
-        <TabPanels>
-          <TabPanel>
+        <TabPanels className="tabPanels">
+          <TabPanel className="tabPanel">
             <Form />
             <Box display="flex" justifyContent="center">
               {randomFact.length ? (
@@ -49,10 +55,11 @@ function App() {
               )}
             </Box>
           </TabPanel>
-          <TabPanel>
+          <TabPanel className="tabPanel">
             <Form isListOfFacts />
             <Box display="flex" justifyContent="center">
               <InfiniteScroll
+                data-testid="scrollBar"
                 dataLength={facts.length}
                 next={getMoreFacts}
                 hasMore={page < lastPage}
@@ -70,7 +77,9 @@ function App() {
                 }
               >
                 {facts.map((fact: any, index: number) => (
-                  <Card key={index}>{fact.fact}</Card>
+                  <Box key={index}>
+                    <Card>{fact.fact}</Card>
+                  </Box>
                 ))}
               </InfiniteScroll>
             </Box>
