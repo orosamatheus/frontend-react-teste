@@ -31,7 +31,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ```bash
 
 # Clone este repositório
-$ git clone 
+$ git clone https://github.com/orosamatheus/frontend-react-teste.git
 
 # Instale as dependências
 $ yarn 
