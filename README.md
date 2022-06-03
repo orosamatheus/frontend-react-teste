@@ -23,6 +23,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - react-infinity-scroll-component
 - react-hook-form
 - vite 
+- jest
+- Docker
 
 ## 🧭 Rodando a aplicação web
 
