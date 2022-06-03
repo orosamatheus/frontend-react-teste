@@ -14,7 +14,6 @@ function FactProvider({ children }: ProviderProps) {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-    reset,
   } = useForm();
 
   async function getRandomFact(maxLength: number) {
